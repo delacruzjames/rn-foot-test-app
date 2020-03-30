@@ -3,7 +3,7 @@ import { View, Image, Text, StyleSheet, FlatList } from 'react-native';
 
 const ResultsDetail = ({result}) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Image
         style={styles.images}
         source={{ uri: result.image_url }}
@@ -15,10 +15,14 @@ const ResultsDetail = ({result}) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    marginLeft: 20
+  },
   images: {
     width: 250,
     height: 120,
-    borderRadius: 5
+    borderRadius: 5,
+    marginBottom: 5
   },
   title: {
     fontSize: 18,
